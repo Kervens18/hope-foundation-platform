@@ -1,0 +1,53 @@
+{
+  "domain": "firstaidintconnect.org",
+  "baseUrl": "https://firstaidintconnect.org",
+  "title": "FIRST AID INTERNATIONAL, INC. - Donation Platform",
+  "description": "Serving children and young adults in Haiti by providing food, shelter, clothing, and education.",
+  "keywords": ["charity", "Haiti", "education", "food", "shelter", "non-profit", "donation", "children"],
+  "logo": "images/logo.png",
+  "favicon": "images/favicon.ico",
+  "language": "en-US",
+  "social": {
+    "facebook": "https://facebook.com/firstaidintconnect",
+    "instagram": "https://instagram.com/firstaidintconnect",
+    "twitter": "https://twitter.com/firstaidintconnect",
+    "linkedin": "https://linkedin.com/company/firstaidintconnect"
+  },
+  "contact": {
+    "email": "info@firstaidintconnect.org",
+    "donationsEmail": "donations@firstaidintconnect.org",
+    "volunteerEmail": "volunteer@firstaidintconnect.org",
+    "phone": "+1 (XXX) XXX-XXXX",
+    "address": "Haiti & United States"
+  },
+  "organization": {
+    "name": "FIRST AID INTERNATIONAL, INC.",
+    "taxId": "501(c)(3)",
+    "founded": 2010,
+    "mission": "To serve children and young adults in Haiti by providing food, shelter, clothing, and education.",
+    "countries": ["Haiti", "United States"],
+    "beneficiaries": 125847,
+    "projects": 432
+  },
+  "features": {
+    "donations": true,
+    "volunteering": true,
+    "blog": true,
+    "projects": true,
+    "impact_tracking": true,
+    "newsletter": true,
+    "multi_currency": true
+  },
+  "deployment": {
+    "environment": "production",
+    "hosting": "github-pages",
+    "ssl": true,
+    "cdn": false,
+    "analytics": {
+      "google_analytics": "UA-XXXXXXXXX-X",
+      "google_tag_manager": "GTM-XXXXXXX"
+    }
+  },
+  "version": "1.0.0",
+  "lastUpdated": "2026-01-16"
+}

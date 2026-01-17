@@ -1,0 +1,23 @@
+# FIRST AID INTERNATIONAL, INC. - robots.txt
+# https://firstaidintconnect.org
+
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /private/
+Disallow: /.git/
+Disallow: /node_modules/
+
+# Sitemaps
+Sitemap: https://firstaidintconnect.org/sitemap.xml
+Sitemap: https://firstaidintconnect.org/sitemap-pages.xml
+
+# Crawl delay (optional)
+Crawl-delay: 1
+
+# Specific rules
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
