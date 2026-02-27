@@ -2,7 +2,6 @@
 
 function renderApp() {
   const app = document.getElementById('app');
-  
   app.innerHTML = `
     ${renderAnnouncementBar()}
     ${renderHeader()}
@@ -12,6 +11,7 @@ function renderApp() {
     ${renderRecentDonationsSection()}
     ${renderTrustBadgesSection()}
     ${renderAboutSection()}
+    ${renderGallerySection()}
     ${renderBlogSection()}
     ${renderNewsletterSection()}
     ${renderFooter()}

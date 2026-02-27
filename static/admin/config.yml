@@ -1,0 +1,60 @@
+backend:
+  name: test-repo
+  local_backend: true
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "products"
+    label: "Produits"
+    folder: "content/products"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Nom du produit", name: "title", widget: "string" }
+      - { label: "Description", name: "description", widget: "text" }
+      - { label: "Prix", name: "price", widget: "number" }
+      - { label: "Image", name: "image", widget: "image" }
+  - name: "vlogs"
+    label: "Vlogs"
+    folder: "content/vlogs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+      - { label: "Image principale", name: "cover", widget: "image", required: false }
+
+  - name: "blogs"
+    label: "Articles de Blog"
+    folder: "content/blogs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre", name: "title", widget: "string" }
+      - { label: "Date", name: "date", widget: "datetime" }
+      - { label: "Auteur", name: "author", widget: "string", required: false }
+      - { label: "Image principale", name: "cover", widget: "image", required: false }
+      - { label: "Contenu", name: "body", widget: "markdown" }
+
+  - name: "galerie"
+    label: "Galerie Photo"
+    folder: "images/uploads/galerie"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Titre de la photo", name: "title", widget: "string" }
+      - { label: "Image", name: "image", widget: "image" }
+      - { label: "Description", name: "description", widget: "text", required: false }
+  - name: "footer"
+    label: "Footer"
+    files:
+      - label: "Liens Réseaux Sociaux"
+        name: "social_links"
+        file: "content/footer/social_links.json"
+        fields:
+          - { label: "Facebook", name: "facebook", widget: "string", required: false }
+          - { label: "TikTok", name: "tiktok", widget: "string", required: false }
+          - { label: "Instagram", name: "instagram", widget: "string", required: false }
+          - { label: "Pinterest", name: "pinterest", widget: "string", required: false }

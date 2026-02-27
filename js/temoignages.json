@@ -1,0 +1,20 @@
+[
+  {
+    "name": "Fatou Diop",
+    "role": "Bénéficiaire",
+    "photo": "images/temoignage-fatou.jpg",
+    "message": "Grâce à la fondation, j'ai pu retourner à l'école et retrouver confiance en l'avenir. Merci pour votre soutien !"
+  },
+  {
+    "name": "Jean-Pierre Louis",
+    "role": "Partenaire local",
+    "photo": "images/temoignage-jeanpierre.jpg",
+    "message": "Notre partenariat a permis d'apporter des soins essentiels à des centaines d'enfants. Une vraie différence sur le terrain."
+  },
+  {
+    "name": "Maria Gomez",
+    "role": "Donatrice",
+    "photo": "images/temoignage-maria.jpg",
+    "message": "Je suis fière de soutenir une organisation aussi transparente et engagée. Chaque don compte !"
+  }
+]

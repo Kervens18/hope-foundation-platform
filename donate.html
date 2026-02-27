@@ -1,0 +1,161 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Item Donation Form - FIRST AID INTERNATIONAL, INC.</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body { background: #f8fafc; }
+    .donate-form-container {
+      max-width: 600px;
+      margin: 40px auto;
+      background: #fff;
+      border-radius: 16px;
+      box-shadow: 0 4px 24px rgba(12,74,110,0.07);
+      padding: 40px 32px 32px 32px;
+      font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    }
+    .donate-form-title {
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      color: #1e293b;
+      margin-bottom: 32px;
+    }
+    .donate-form-row {
+      display: flex;
+      gap: 16px;
+      margin-bottom: 18px;
+    }
+    .donate-form-row > div { flex: 1; }
+    .donate-form-label {
+      font-weight: 600;
+      color: #334155;
+      margin-bottom: 6px;
+      display: block;
+      font-size: 1rem;
+    }
+    .donate-form-input, .donate-form-textarea {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1.5px solid #e0e7ef;
+      border-radius: 8px;
+      font-size: 1rem;
+      margin-bottom: 0;
+      background: #f8fafc;
+      transition: border-color 0.2s;
+    }
+    .donate-form-input:focus, .donate-form-textarea:focus {
+      border-color: #0ea5e9;
+      outline: none;
+      background: #fff;
+    }
+    .donate-form-radio-group {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 18px 32px;
+      margin-bottom: 18px;
+    }
+    .donate-form-radio {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      font-size: 1rem;
+      color: #334155;
+    }
+    .donate-form-submit {
+      width: 100%;
+      padding: 12px 0;
+      background: #22c55e;
+      color: #fff;
+      font-weight: 700;
+      font-size: 1.1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      margin-top: 18px;
+      transition: background 0.2s;
+    }
+    .donate-form-submit:hover {
+      background: #16a34a;
+    }
+    .donate-form-note {
+      text-align: center;
+      color: #16a34a;
+      font-weight: 600;
+      margin-top: 18px;
+      font-size: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="donate-form-container">
+    <div class="donate-form-title">Item Donation Form</div>
+    <form>
+      <div class="donate-form-row">
+        <div>
+          <label class="donate-form-label">Name</label>
+          <input class="donate-form-input" type="text" placeholder="First Name" required>
+        </div>
+        <div>
+          <label class="donate-form-label" style="opacity:0">Last Name</label>
+          <input class="donate-form-input" type="text" placeholder="Last Name" required>
+        </div>
+      </div>
+      <div class="donate-form-row">
+        <div>
+          <label class="donate-form-label">Phone Number</label>
+          <input class="donate-form-input" type="tel" placeholder="(000) 000-0000" pattern="[0-9\-\(\) ]+" required>
+        </div>
+        <div>
+          <label class="donate-form-label">Email</label>
+          <input class="donate-form-input" type="email" placeholder="example@example.com" required>
+        </div>
+      </div>
+      <div>
+        <label class="donate-form-label">Address</label>
+        <input class="donate-form-input" type="text" placeholder="Street Address" required>
+      </div>
+      <div>
+        <input class="donate-form-input" type="text" placeholder="Street Address Line 2">
+      </div>
+      <div class="donate-form-row">
+        <div>
+          <input class="donate-form-input" type="text" placeholder="City" required>
+        </div>
+        <div>
+          <input class="donate-form-input" type="text" placeholder="State / Province" required>
+        </div>
+      </div>
+      <div>
+        <input class="donate-form-input" type="text" placeholder="Postal / Zip Code" required>
+      </div>
+      <div class="donate-form-label" style="margin-top:18px;">Type of Donation</div>
+      <div class="donate-form-radio-group">
+        <label class="donate-form-radio"><input type="radio" name="donation-type" required> Financial Donations</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Shoes and Bags</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Books</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Arts</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Hygiene Essentials</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Furniture</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Clothing</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Kitchenware</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Toys and Games</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Linens</label>
+        <label class="donate-form-radio"><input type="radio" name="donation-type"> Sporting Goods</label>
+      </div>
+      <div>
+        <label class="donate-form-label">What would you like to donate?</label>
+        <input class="donate-form-input" type="text" required>
+      </div>
+      <div>
+        <label class="donate-form-label">Notes</label>
+        <textarea class="donate-form-textarea" rows="3"></textarea>
+      </div>
+      <div class="donate-form-note">Remember to check your email for responses!</div>
+      <button class="donate-form-submit" type="submit">Submit</button>
+    </form>
+  </div>
+</body>
+</html>

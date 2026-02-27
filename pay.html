@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pay Order - FIRST AID INTERNATIONAL, INC.</title>
+  <link rel="stylesheet" href="styles/main.css">
+  <style>
+    body {
+      min-height: 100vh;
+      margin: 0;
+      font-family: 'Segoe UI', Arial, sans-serif;
+      /* Glassmorphism background, no color */
+      background: url('images/assets/mains-plante.jpg') center center/cover no-repeat fixed;
+      position: relative;
+      overflow-x: hidden;
+    }
+    .glass-bg {
+      position: fixed;
+      top: 0; left: 0; right: 0; bottom: 0;
+      width: 100vw; height: 100vh;
+      z-index: 0;
+      background: rgba(255,255,255,0.7);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      pointer-events: none;
+    }
+    .payment-container {
+      max-width: 400px;
+      margin: 48px auto;
+      background: rgba(255,255,255,0.35);
+      border-radius: 18px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.18);
+      overflow: hidden;
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      border: 1.5px solid rgba(255,255,255,0.25);
+      z-index: 1;
+    }
+    .org-title {
+      text-align: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #ff9800;
+      margin-top: 32px;
+      letter-spacing: 1px;
+    }
+    .payment-header {
+      background: #ff9800;
+      color: #fff;
+      text-align: center;
+      padding: 18px 0 10px 0;
+      font-size: 1.3rem;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+    .payment-form {
+      padding: 32px 24px 16px 24px;
+      background: rgba(255,255,255,0.95);
+    }
+    .payment-form label {
+      display: block;
+      margin-bottom: 6px;
+      color: #333;
+      font-weight: 500;
+    }
+    .payment-form input {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+      background: #f9f9f9;
+    }
+    .payment-form .row {
+      display: flex;
+      gap: 12px;
+    }
+    .payment-form .row input {
+      flex: 1;
+    }
+    .pay-btn {
+      width: 100%;
+      background: #ff9800;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      padding: 12px;
+      font-size: 1.1rem;
+      font-weight: bold;
+      cursor: pointer;
+      margin-bottom: 12px;
+      transition: background 0.2s;
+    }
+    .pay-btn:hover {
+      background: #fb8c00;
+    }
+    .other-methods {
+      padding: 0 24px 24px 24px;
+      background: rgba(255,255,255,0.95);
+      text-align: center;
+    }
+    .other-methods button {
+      width: 100%;
+      margin: 6px 0;
+      padding: 10px;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+    .paypal { background: #003087; color: #fff; }
+    .paypal:hover { background: #005ea6; }
+    .stripe { background: #635bff; color: #fff; }
+    .stripe:hover { background: #5146e1; }
+    .applepay { background: #222; color: #fff; }
+    .applepay:hover { background: #444; }
+    .googlepay { background: #fff; color: #222; border: 1px solid #ccc; }
+    .googlepay:hover { background: #f5f5f5; }
+    .alipay { background: #1677ff; color: #fff; }
+    .alipay:hover { background: #125bb5; }
+    .wechat { background: #09bb07; color: #fff; }
+    .wechat:hover { background: #079a05; }
+    .crypto { background: #f7931a; color: #fff; }
+    .crypto:hover { background: #c87d0e; }
+    .separator {
+      margin: 18px 0 10px 0;
+      text-align: center;
+      color: #aaa;
+      font-size: 0.95rem;
+      position: relative;
+    }
+    .separator:before, .separator:after {
+      content: '';
+      display: inline-block;
+      width: 30%;
+      height: 1px;
+      background: #eee;
+      vertical-align: middle;
+      margin: 0 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="glass-bg"></div>
+  <div class="org-title">FIRST AID INTERNATIONAL, INC.</div>
+  <div class="payment-container">
+    <div class="payment-header">PAYMENT CARD</div>
+    <form class="payment-form">
+      <label for="card-name">Name on Card</label>
+      <input type="text" id="card-name" placeholder="John Smith" required>
+      <label for="card-number">Card Number</label>
+      <input type="text" id="card-number" maxlength="19" placeholder="•••• •••• •••• ••••" required>
+      <div class="row">
+        <div style="flex:2;">
+          <label for="exp-date">Expiration Date</label>
+          <input type="text" id="exp-date" maxlength="5" placeholder="MM/YY" required>
+        </div>
+        <div style="flex:1;">
+          <label for="cvv">CVV</label>
+          <input type="text" id="cvv" maxlength="4" placeholder="•••" required>
+        </div>
+      </div>
+      <button type="submit" class="pay-btn">MAKE A PAYMENT →</button>
+    </form>
+    <div class="separator">or pay with</div>
+    <div class="other-methods">
+      <button class="paypal">PayPal</button>
+      <button class="stripe">Stripe</button>
+      <button class="applepay">Apple Pay</button>
+      <button class="googlepay">Google Pay</button>
+      <button class="alipay">Alipay</button>
+      <button class="wechat">WeChat Pay</button>
+      <button class="crypto">Cryptocurrency</button>
+    </div>
+  </div>
+  <!-- Footer -->
+  <footer style="background: #0F172A; color: white; padding: 80px 0 32px; margin-top: 48px;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <p style="opacity: 0.6; font-size: 14px;">© 2025 FIRST AID INTERNATIONAL, INC. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 14px;">
+          <a href="legal.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Legal Notice</a>
+          <a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a>
+          <a href="cookies.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

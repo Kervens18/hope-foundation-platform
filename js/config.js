@@ -11,8 +11,8 @@ const state = {
 const projects = [
   {
     id: 1,
-    title: 'Eau Potable en Haiti',
-    description: 'Ce projet vise à fournir un accès à l\'eau potable à 2,000 personnes dans une région rurale de Haïti. Installation de puits, systèmes de filtration et formation des communautés locales à la maintenance.',
+    title: 'Drinking Water in Haiti',
+    description: 'This project aims to provide access to clean drinking water for 2,000 people in a rural region of Haiti. Installation of wells, filtration systems, and training of local communities in maintenance.',
     image: 'images/project-1.jpg',
     emoji: '💧',
     category: 'water',
@@ -27,8 +27,8 @@ const projects = [
   },
   {
     id: 2,
-    title: 'Éducation pour Tous',
-    description: 'Programme d\'éducation inclusif pour enfants défavorisés. Fournir accès à l\'école, fournitures scolaires et formation des enseignants.',
+    title: 'Education for All',
+    description: 'Inclusive education program for disadvantaged children. Providing access to school, school supplies, and teacher training.',
     image: 'images/project-2.jpg',
     emoji: '📚',
     category: 'education',
@@ -41,8 +41,8 @@ const projects = [
   },
   {
     id: 3,
-    title: 'Clinique Mobile',
-    description: 'Service de santé mobile pour zones rurales. Consultations médicales, vaccinations et sensibilisation à la santé.',
+    title: 'Mobile Clinic',
+    description: 'Mobile health service for rural areas. Medical consultations, vaccinations, and health awareness.',
     image: 'images/project-3.jpg',
     emoji: '🏥',
     category: 'health',
@@ -56,7 +56,7 @@ const projects = [
   {
     id: 4,
     title: 'Reforestation',
-    description: 'Plantation massive d\'arbres pour combattre le changement climatique et créer emplois verts. Formation à l\'agriculture durable.',
+    description: 'Massive tree planting to fight climate change and create green jobs. Training in sustainable agriculture.',
     image: 'images/project-4.jpg',
     emoji: '🌳',
     category: 'environment',
@@ -69,8 +69,8 @@ const projects = [
   },
   {
     id: 5,
-    title: 'Formation Professionnelle',
-    description: 'Ateliers de formation aux compétences techniques et entrepreneuriat pour jeunes adultes sans emploi.',
+    title: 'Vocational Training',
+    description: 'Workshops on technical skills and entrepreneurship for unemployed young adults.',
     image: 'images/project-5.jpg',
     emoji: '👨‍🏫',
     category: 'education',
@@ -83,8 +83,8 @@ const projects = [
   },
   {
     id: 6,
-    title: 'Aide d\'Urgence Catastrophe',
-    description: 'Réponse immédiate aux catastrophes naturelles. Distribution d\'aide alimentaire, abris d\'urgence et soins médicaux.',
+    title: 'Disaster Emergency Aid',
+    description: 'Immediate response to natural disasters. Distribution of food aid, emergency shelters, and medical care.',
     image: 'images/project-6.jpg',
     emoji: '🚨',
     category: 'urgent',
@@ -102,25 +102,25 @@ const recentDonations = [
   {
     name: 'Marie D.',
     initials: 'M',
-    project: 'Eau Potable en Haiti',
+    project: 'Clean Water in Haiti',
     amount: 50,
-    time: 'Il y a 2 min',
+    time: '2 min ago',
     color: 'secondary'
   },
   {
     name: 'Jean P.',
     initials: 'J',
-    project: 'Éducation pour Tous',
+    project: 'Education for All',
     amount: 100,
-    time: 'Il y a 8 min',
+    time: '8 min ago',
     color: 'accent'
   },
   {
     name: 'Sophie L.',
     initials: 'S',
-    project: 'Mensuel',
+    project: 'Monthly',
     amount: 25,
-    time: 'Il y a 15 min',
+    time: '15 min ago',
     color: 'success'
   }
 ];
@@ -211,16 +211,19 @@ const impactStats = [
   {
     value: '125,847',
     label: 'Bénéficiaires aidés',
+    labelEn: 'Beneficiaries helped',
     emoji: '👨‍👩‍👧‍👦'
   },
   {
     value: '432',
     label: 'Projets réalisés',
+    labelEn: 'Projects completed',
     emoji: '🎯'
   },
   {
     value: '34',
     label: 'Pays d\'intervention',
+    labelEn: 'Countries of operation',
     emoji: '🌍'
   }
 ];
@@ -230,22 +233,22 @@ const trustBadges = [
   {
     emoji: '🏆',
     icon: 'images/badge-certified.png',
-    title: 'Certifiée ONG',
-    description: 'Transparence financière garantie',
+    title: 'Certified NGO',
+    description: 'Guaranteed financial transparency',
     color: '#F59E0B'
   },
   {
     emoji: '📜',
     icon: 'images/badge-fiscal.png',
-    title: 'Reçu Fiscal',
-    description: '66% de réduction d\'impôts',
+    title: 'Tax Receipt',
+    description: '66% tax deduction',
     color: '#10B981'
   },
   {
     emoji: '✨',
     icon: 'images/badge-impact.png',
-    title: 'Impact Vérifié',
-    description: 'Rapports trimestriels détaillés',
+    title: 'Verified Impact',
+    description: 'Detailed quarterly reports',
     color: '#0EA5E9'
   }
 ];

@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="fr" class="h-full">
+<html lang="en" class="h-full">
  <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -22,13 +22,9 @@
   <div id="toast" class="toast hidden"><span id="toast-icon">✓</span> <span id="toast-message">Success!</span></div>
 
   <!-- STICKY DONATE BUTTON -->
-  <button onclick="openQuickDonate()" class="btn btn-accent sticky-donate-btn"> 💝 Faire un don </button>
+    <!-- Donate button removed -->
 
-  <!-- QUICK DONATE DRAWER -->
-  <div id="quick-donate-drawer" class="hidden">
-   <div style="position: fixed; inset: 0; background: rgba(0,0,0,0.5); z-index: 999;" onclick="closeQuickDonate()"></div>
-   <div class="drawer animate-slide-in-right" id="donate-drawer"></div>
-  </div>
+
 
   <!-- PROJECT QUICK VIEW MODAL -->
   <div id="project-modal" class="modal-overlay hidden" onclick="if(event.target === this) closeProjectModal()">
@@ -48,6 +44,10 @@
   <script src="js/utils.js"></script>
   <script src="js/components.js"></script>
   <script src="js/modals.js"></script>
+  <script src="js/blog-loader.js"></script>
+  <script src="js/gallery-loader.js"></script>
+  <script src="js/footer-links-loader.js"></script>
   <script src="js/app.js"></script>
- </body>
+
+</body>
 </html>

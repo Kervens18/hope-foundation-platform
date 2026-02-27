@@ -1,0 +1,150 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>FAQ - FIRST AID INTERNATIONAL</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body>
+  <header style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.03); padding: 0;">
+    <div style="max-width:1200px; margin:0 auto; display:flex; align-items:center; justify-content:space-between; padding: 18px 0 18px 0;">
+      <div style="display:flex; align-items:center; gap:12px;">
+        <span style="font-size:32px;">🌍</span>
+        <div>
+          <span style="font-family:serif; font-size:1.5rem; font-weight:700; color:#0C4A6E; display:block;">FIRST AID INTERNATIONAL,<br>INC.</span>
+          <span style="font-size:11px; letter-spacing:1px; color:#64748b; text-transform:uppercase;">BUILDING A BETTER FUTURE</span>
+        </div>
+      </div>
+      <nav style="display:flex; align-items:center; gap:32px; font-size:1.1rem;">
+        <a href="index.html" style="color:#0f172a; text-decoration:none;">Projects</a>
+        <a href="impact.html" style="color:#0f172a; text-decoration:none;">Impact</a>
+        <a href="about.html" style="color:#0f172a; text-decoration:none;">About</a>
+        <a href="shop.html" style="color:#0f172a; text-decoration:none;" aria-current="page">Shop</a>
+        <a href="blog.html" style="color:#0f172a; text-decoration:none;">News</a>
+        <a href="#" style="color:#0f172a; text-decoration:none;">Volunteer</a>
+      </nav>
+        <!-- Removed Donate link -->
+    </div>
+  </header>
+  <main style="max-width: 950px; margin: 3rem auto 2rem auto; padding: 2.5rem 2rem; background: linear-gradient(135deg, #f8fafc 60%, #e0f2fe 100%); border-radius: 1.5rem; box-shadow: 0 8px 32px rgba(12,74,110,0.10); border: 1.5px solid #e0e7ef; font-family: 'Segoe UI', 'Roboto', 'Helvetica Neue', Arial, sans-serif;">
+    <h1 style="font-size:2.5rem; color:#0C4A6E; margin-bottom:2.2rem; font-family:'Merriweather',serif; font-weight:900; letter-spacing:0.5px; text-align:center; display:flex; align-items:center; justify-content:center; gap:12px;">
+      <span style="font-size:2.2rem;">❓</span> Comprehensive FAQ – FIRST AID INTERNATIONAL, INC.
+    </h1>
+    <div style="font-size:1.13rem; color:#1e293b; line-height:1.85; letter-spacing:0.01em;">
+      <div style="margin-bottom:2.5rem; font-size:1.1rem; color:#334155; text-align:center; font-style:italic;">Welcome to the extended and detailed Frequently Asked Questions section for <b>FIRST AID INTERNATIONAL, INC.</b> This document is designed to provide in-depth clarity regarding our mission, governance, training standards, operational protocols, partnerships, compliance frameworks, humanitarian interventions, and long-term strategic objectives.</div>
+      <div id="faq-list" style="margin:0 auto; max-width:800px;">
+        <!-- FAQ items will be injected here by JavaScript -->
+      </div>
+      <div style="margin:2.5rem 0 0 0; padding:1.5rem 1rem; background:linear-gradient(90deg,#e0f2fe 0%,#f8fafc 100%); border-radius:0.8rem; color:#0C4A6E; font-size:1.15rem; font-family:'Merriweather',serif; font-weight:700; text-align:center; box-shadow:0 2px 8px rgba(12,74,110,0.04);">
+        FIRST AID INTERNATIONAL, INC. exists to elevate global emergency preparedness through education, ethical humanitarian action, and systemic resilience building.<br>
+        <span style="color:#0369a1;">We believe that preparedness is power, knowledge is protection, and trained individuals transform communities.</span>
+      </div>
+    </div>
+  </main>
+  <script>
+    // Premium interactive FAQ data
+    const faqData = [
+      {
+        section: 'ORGANIZATIONAL OVERVIEW',
+        items: [
+          {
+            q: 'What is FIRST AID INTERNATIONAL, INC.?',
+            a: 'FIRST AID INTERNATIONAL, INC. is an emergency preparedness, first aid education, and humanitarian response organization dedicated to strengthening global life-saving capacity. We operate at the intersection of training, community resilience development, disaster response coordination, and health advocacy.'
+          },
+          {
+            q: 'Is FIRST AID INTERNATIONAL, INC. a nonprofit organization?',
+            a: 'Yes. We operate under a structured nonprofit governance model focused on mission-driven impact rather than profit generation. Financial resources are reinvested into education programs, humanitarian outreach, and operational capacity building.'
+          },
+          {
+            q: 'What problem does your organization aim to solve?',
+            a: `<ul style="margin:0.5rem 0 0 1.5rem; padding:0; list-style:square; color:#0ea5e9;"><li style="color:#0f172a;">Public access to emergency training</li><li style="color:#0f172a;">Community-level disaster readiness</li><li style="color:#0f172a;">Preventable injury and mortality</li><li style="color:#0f172a;">Emergency response awareness</li><li style="color:#0f172a;">Institutional safety compliance</li></ul>Our mission is preventive and proactive — we aim to reduce emergency-related fatalities before professional responders arrive.`
+          },
+          {
+            q: 'What makes your organization different from other training providers?',
+            a: `<ul style="margin:0.5rem 0 0 1.5rem; padding:0; list-style:square; color:#0ea5e9;"><li style="color:#0f172a;">Integration of humanitarian response and training</li><li style="color:#0f172a;">Community-centered resilience frameworks</li><li style="color:#0f172a;">Standardized curriculum governance</li><li style="color:#0f172a;">Strategic partnerships</li><li style="color:#0f172a;">Long-term capacity building initiatives</li><li style="color:#0f172a;">Ethical operational oversight</li></ul>We do not merely certify individuals — we build preparedness ecosystems.`
+          }
+        ]
+      },
+      // ... Add other sections and questions here, following the same structure ...
+    ];
+
+    // Render premium FAQ
+    function renderPremiumFAQ() {
+      const faqList = document.getElementById('faq-list');
+      faqList.innerHTML = '';
+      faqData.forEach(section => {
+        const sectionDiv = document.createElement('div');
+        sectionDiv.innerHTML = `<div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600; text-transform:uppercase; letter-spacing:1px;">${section.section}</div>`;
+        section.items.forEach((item, idx) => {
+          const faqItem = document.createElement('div');
+          faqItem.className = 'faq-premium-item';
+          faqItem.style = 'margin-bottom:1.5rem; border-radius:0.7rem; background:#fff; box-shadow:0 2px 8px rgba(12,74,110,0.04); padding:1.2rem 1.2rem 1.2rem 2.2rem; position:relative;';
+          faqItem.innerHTML = `
+            <button class="faq-toggle" aria-expanded="false" style="background:none; border:none; outline:none; font-size:1.15rem; font-weight:700; color:#0C4A6E; display:flex; align-items:center; gap:10px; cursor:pointer; width:100%; text-align:left;">
+              <span style="font-size:1.3rem; color:#0ea5e9;">❓</span>
+              <span>${item.q}</span>
+              <span class="faq-arrow" style="margin-left:auto; font-size:1.2rem; color:#0369a1; transition:transform 0.2s;">▼</span>
+            </button>
+            <div class="faq-answer" style="display:none; margin-top:1.1rem; color:#334155; font-size:1.07rem;">${item.a}</div>
+          `;
+          sectionDiv.appendChild(faqItem);
+        });
+        faqList.appendChild(sectionDiv);
+      });
+      // Add toggle logic
+      document.querySelectorAll('.faq-toggle').forEach(btn => {
+        btn.addEventListener('click', function() {
+          const answer = this.parentElement.querySelector('.faq-answer');
+          const arrow = this.querySelector('.faq-arrow');
+          const expanded = this.getAttribute('aria-expanded') === 'true';
+          this.setAttribute('aria-expanded', !expanded);
+          if (!expanded) {
+            answer.style.display = 'block';
+            arrow.style.transform = 'rotate(180deg)';
+          } else {
+            answer.style.display = 'none';
+            arrow.style.transform = 'rotate(0deg)';
+          }
+        });
+      });
+    }
+    document.addEventListener('DOMContentLoaded', renderPremiumFAQ);
+  </script>
+      <div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600;">SECTION VI: FUNDING & GOVERNANCE</div>
+      <div style="margin-bottom:1.5rem;"><b>19. How is your organization funded?</b><br>Funding sources include: <span style="color:#0ea5e9;">Training fees, Grants, Donations, Corporate sponsorships, Institutional partnerships, Government contracts</span>. All financial operations adhere to nonprofit governance standards.</div>
+      <div style="margin-bottom:1.5rem;"><b>20. Do you publish impact reports?</b><br>Yes. We maintain impact reporting systems to measure: <span style="color:#0ea5e9;">Individuals trained, Communities served, Emergency interventions conducted, Volunteer engagement metrics, Resource distribution data</span>. Transparency reinforces trust and accountability.</div>
+      <div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600;">SECTION VII: TECHNICAL & OPERATIONAL STANDARDS</div>
+      <div style="margin-bottom:1.5rem;"><b>21. How do you measure training effectiveness?</b><br>We utilize: <span style="color:#0ea5e9;">Pre- and post-assessment testing, Skill demonstration verification, Knowledge retention surveys, Incident outcome analysis, Continuous curriculum review</span>.</div>
+      <div style="margin-bottom:1.5rem;"><b>22. What is your quality assurance framework?</b><br>Our quality control includes: <span style="color:#0ea5e9;">Instructor recertification, Standardized training materials, Audit processes, Compliance documentation, Participant feedback analysis</span>.</div>
+      <div style="margin-bottom:1.5rem;"><b>23. Do you collaborate with healthcare professionals?</b><br>Yes. We maintain partnerships with: <span style="color:#0ea5e9;">Physicians, Nurses, Emergency medical technicians, Public health experts, Safety engineers</span>. These collaborations strengthen curriculum accuracy and field relevance.</div>
+      <div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600;">SECTION VIII: LONG-TERM STRATEGIC VISION</div>
+      <div style="margin-bottom:1.5rem;"><b>24. What is your long-term global objective?</b><br>Our objective is to establish first aid education as a universal competency, comparable to literacy or digital literacy. We aim to: <span style="color:#0ea5e9;">Train millions globally, Embed emergency training into public policy, Strengthen grassroots preparedness networks, Reduce preventable mortality rates</span>.</div>
+      <div style="margin-bottom:1.5rem;"><b>25. Why is first aid education essential today?</b><br>Emergencies often occur before professional responders arrive. Immediate intervention during the first minutes significantly increases survival probability. Knowledge empowers individuals to: <span style="color:#0ea5e9;">Act decisively, Prevent complications, Reduce panic, Save lives</span>. Prepared individuals create resilient societies.</div>
+      <div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600;">SECTION IX: DONATIONS & SUPPORT</div>
+      <div style="margin-bottom:1.5rem;"><b>26. How can I donate?</b><br>Donations may support: <span style="color:#0ea5e9;">Community outreach programs, Disaster response operations, Training scholarships, Equipment procurement, Instructor development initiatives</span>.</div>
+      <div style="margin-bottom:1.5rem;"><b>27. Can corporations sponsor programs?</b><br>Yes. Sponsorship opportunities include: <span style="color:#0ea5e9;">Community training initiatives, Disaster preparedness campaigns, Public awareness events, Equipment donation drives</span>. Strategic sponsors are acknowledged according to ethical branding guidelines.</div>
+      <div style="border-left:4px solid #0ea5e9; padding-left:1.2rem; margin:2.2rem 0 1.5rem 0; background:rgba(236,254,255,0.4); font-size:1.05rem; color:#0369a1; font-weight:600;">SECTION X: GENERAL QUESTIONS</div>
+      <div style="margin-bottom:1.5rem;"><b>28. Is prior medical knowledge required to enroll?</b><br>No. Basic programs are designed for individuals with no medical background.</div>
+      <div style="margin-bottom:1.5rem;"><b>29. Is first aid training physically demanding?</b><br>Most courses are accessible to individuals with moderate physical ability. Certain advanced programs may require higher stamina.</div>
+      <div style="margin-bottom:1.5rem;"><b>30. How can I contact FIRST AID INTERNATIONAL, INC.?</b><br>Contact methods typically include: <span style="color:#0ea5e9;">Official website inquiry forms, Corporate communication email, Authorized training centers, Administrative offices</span>.</div>
+      <div style="margin:2.5rem 0 0 0; padding:1.5rem 1rem; background:linear-gradient(90deg,#e0f2fe 0%,#f8fafc 100%); border-radius:0.8rem; color:#0C4A6E; font-size:1.15rem; font-family:'Merriweather',serif; font-weight:700; text-align:center; box-shadow:0 2px 8px rgba(12,74,110,0.04);">
+        FIRST AID INTERNATIONAL, INC. exists to elevate global emergency preparedness through education, ethical humanitarian action, and systemic resilience building.<br>
+        <span style="color:#0369a1;">We believe that preparedness is power, knowledge is protection, and trained individuals transform communities.</span>
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer style="background: #0F172A; color: white; padding: 80px 0 32px; margin-top: 48px;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <p style="opacity: 0.6; font-size: 14px;">© 2025 FIRST AID INTERNATIONAL, INC. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 14px;">
+          <a href="legal.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Legal Notice</a>
+          <a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a>
+          <a href="cookies.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,248 @@
+<!doctype html>
+<html lang="en" class="h-full">
+ <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  
+  <!-- Security Headers -->
+  <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains; preload">
+  
+  <!-- Description and Keywords -->
+  <meta name="description" content="FIRST AID INTERNATIONAL Shop - Buy our exclusive products and support our humanitarian projects">
+  <meta name="keywords" content="shop, products, donation, humanitarian, Haiti, merchandise">
+  <meta name="author" content="FIRST AID INTERNATIONAL, INC.">
+  
+  <!-- Open Graph / Social Media -->
+  <meta property="og:title" content="Shop - FIRST AID INTERNATIONAL">
+  <meta property="og:description" content="Discover our exclusive shop and support our projects!">
+  <meta property="og:url" content="https://firstaidintconnect.org/shop.html">
+  <meta name="theme-color" content="#0C4A6E">
+  
+  <!-- Domain Verification -->
+  <link rel="canonical" href="https://firstaidintconnect.org/shop.html">
+  
+  <!-- Title -->
+  <title>Shop - FIRST AID INTERNATIONAL, INC.</title>
+  
+  <!-- External Resources (HTTPS) -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles/main.css">
+ </head>
+ <body class="h-full overflow-auto" style="background-color: var(--color-background);">
+  <!-- Emergency Campaign Banner -->
+  <div style="background: #e98a0c; color: #fff; font-weight: 600; font-size: 16px; padding: 10px 0; text-align: center; letter-spacing: 0.5px;">
+    <span style="color: #fff;">⚡ Emergency Campaign: All donations are doubled this weekend!</span>
+    <a href="#" style="color: #fff; text-decoration: underline; margin-left: 12px;">Learn more →</a>
+  </div>
+
+  <!-- Modern Header -->
+  <header class="main-header modern-header" style="background: #fff; box-shadow: 0 2px 8px rgba(0,0,0,0.03);">
+    <div class="container" style="max-width: 1200px; margin: 0 auto; padding: 0 24px;">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 32px 0 18px 0;">
+        <a href="index.html" style="display: flex; align-items: center; gap: 12px; text-decoration: none;">
+          <img src="images/logo.png" alt="Hope Foundation Logo" style="height: 48px; width: 48px; border-radius: 50%; box-shadow: 0 2px 8px rgba(0,0,0,0.07);">
+          <div>
+            <span style="font-family: 'Georgia', serif; font-size: 1.6rem; font-weight: bold; color: #0C4A6E; display: block;">FIRST AID<br>INTERNATIONAL, INC.</span>
+            <span style="font-size: 0.85rem; color: #7b8794; letter-spacing: 1px;">BUILDING A BETTER FUTURE</span>
+          </div>
+        </a>
+        <nav style="display: flex; gap: 32px; align-items: center; font-size: 1.08rem; font-weight: 500;">
+          <a href="projects.html" style="color: #222; text-decoration: none;">Projects</a>
+          <a href="impact.html" style="color: #222; text-decoration: none;">Impact</a>
+          <a href="about.html" style="color: #222; text-decoration: none;">About</a>
+          <a href="shop.html" style="color: #222; text-decoration: none; font-weight: bold;">Shop</a>
+          <a href="blog.html" style="color: #222; text-decoration: none;">News</a>
+          <a href="team.html" style="color: #222; text-decoration: none;">Volunteer</a>
+        </nav>
+        <a href="donate.html" class="btn btn-accent" style="font-size: 1.1rem; font-weight: 700; border-radius: 16px; padding: 18px 32px; box-shadow: 0 4px 16px rgba(12,74,110,0.10); text-decoration: none; display: flex; align-items: center; gap: 8px; transition: background 0.2s;">
+          <span style="font-size: 1.3rem;">💝</span> Donate
+        </a>
+        </a>
+      </div>
+    </div>
+  </header>
+  <!-- TOAST -->
+  <div id="toast" class="toast hidden" aria-live="polite"><span id="toast-icon">✓</span> <span id="toast-message">Success!</span></div>
+
+  <!-- STICKY DONATE BUTTON -->
+  <a href="donate.html" class="btn btn-accent sticky-donate-btn"> 💝 Donate </a>
+
+
+
+  <!-- PROJECT QUICK VIEW MODAL -->
+  <div id="project-modal" class="modal-overlay hidden" role="dialog" aria-modal="true" tabindex="0" onclick="if(event.target === this) closeProjectModal()">
+   <div class="card animate-scale-in" style="max-width: 900px; width: 100%; max-height: 90%; overflow: auto;" onclick="event.stopPropagation()" id="project-modal-content"></div>
+  </div>
+
+  <!-- SHOP PAGE -->
+  <div id="app">
+    <!-- ...existing code... -->
+
+    <!-- Shop Hero -->
+    <section style="background: linear-gradient(135deg, #FEF3C7 0%, #FDE68A 100%); padding: 80px 0;">
+      <div class="container">
+        <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+          <h1 class="font-display animate-fade-in-up" style="font-size: clamp(40px, 6vw, 72px); font-weight: 800; color: var(--color-primary); line-height: 1.1; margin-bottom: 24px;">Our Exclusive Shop</h1>
+          <p class="animate-fade-in-up delay-200" style="font-size: 20px; color: var(--color-text-light); margin-bottom: 16px; line-height: 1.7;">Support our projects by purchasing premium quality products</p>
+          <p style="font-size: 16px; color: var(--color-text); font-weight: 600;">🎁 50% of profits go to humanitarian projects</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Shop Grid -->
+    <section class="section">
+      <div class="container">
+        <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px; flex-wrap: wrap; gap: 16px;">
+          <div>
+            <h2 class="font-display text-3xl font-bold" style="color: var(--color-primary);">All Our Products</h2>
+            <p style="color: var(--color-text-light); margin-top: 8px;">Every purchase makes a difference</p>
+          </div>
+          <a href="cart.html" class="btn btn-primary" style="position: relative; font-size: 16px; padding: 14px 24px; transition: all 0.3s ease; border-radius: 12px; display:inline-flex; align-items:center; text-decoration:none;" onmouseover="this.style.transform='scale(1.05)'; this.style.boxShadow='0 8px 20px rgba(12, 74, 110, 0.3)'" onmouseout="this.style.transform='scale(1)'; this.style.boxShadow='none'">
+            🛒 My Cart <span id="cart-badge" style="margin-left:8px; background: var(--color-accent); color: white; min-width: 28px; height: 28px; border-radius: 50%; display: inline-flex; align-items: center; justify-content: center; font-size: 14px; font-weight: bold;">0</span>
+          </a>
+        </div>
+        <div id="shop-grid" style="display: grid; grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); gap: 32px;"></div>
+      </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section class="section" style="background: var(--color-surface);">
+      <div class="container">
+        <div style="text-align: center; margin-bottom: 48px;">
+          <h2 class="font-display text-3xl font-bold" style="color: var(--color-primary);">Your Impact per Purchase</h2>
+          <p style="color: var(--color-text-light); margin-top: 8px; font-size: 18px;">See how your purchases help communities</p>
+        </div>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px;">
+          <div class="card" style="padding: 32px; text-align: center;">
+            <div style="font-size: 64px; margin-bottom: 16px;">👕</div>
+            <div style="font-weight: 700; color: var(--color-primary); font-size: 24px; margin-bottom: 8px;">T-Shirt</div>
+            <div style="color: var(--color-text-light); margin-bottom: 16px;">= 5 school meals</div>
+            <div style="font-size: 14px; color: var(--color-text);">Helps a child eat well and focus at school</div>
+          </div>
+          <div class="card" style="padding: 32px; text-align: center;">
+            <div style="font-size: 64px; margin-bottom: 16px;">📓</div>
+            <div style="font-weight: 700; color: var(--color-primary); font-size: 24px; margin-bottom: 8px;">Notebook</div>
+            <div style="color: var(--color-text-light); margin-bottom: 16px;">= 1 month of supplies</div>
+            <div style="font-size: 14px; color: var(--color-text);">Allows a child to attend classes properly</div>
+          </div>
+          <div class="card" style="padding: 32px; text-align: center;">
+            <div style="font-size: 64px; margin-bottom: 16px;">☕</div>
+            <div style="font-weight: 700; color: var(--color-primary); font-size: 24px; margin-bottom: 8px;">Mug</div>
+            <div style="color: var(--color-text-light); margin-bottom: 16px;">= 2L of clean water</div>
+            <div style="font-size: 14px; color: var(--color-text);">Provides treated, safe water to a family</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer style="background: #0F172A; color: white; padding: 80px 0 32px;">
+      <div class="container">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 48px; margin-bottom: 64px;">
+          <div>
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 24px;">
+              <div style="font-size: 40px;">🌍</div>
+              <div>
+                <h3 class="font-display text-2xl font-bold" style="line-height: 1;">FIRST AID INTERNATIONAL, INC.</h3>
+              </div>
+            </div>
+            <p style="opacity: 0.8; line-height: 1.7;">Public Benefit NGO • Solidarity Shop</p>
+          </div>
+          <div>            <h4 style="font-weight: 700; margin-bottom: 20px; font-size: 16px;">Navigation</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 12px;"><a href="index.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">Back to Home</a></li>
+              <li style="margin-bottom: 12px;"><a href="index.html#projects" style="color: rgba(255,255,255,0.7); text-decoration: none;">Our Projects</a></li>
+              <li style="margin-bottom: 12px;"><a href="index.html#about" style="color: rgba(255,255,255,0.7); text-decoration: none;">About Us</a></li>
+              <li style="margin-bottom: 12px;"><a href="index.html#blog" style="color: rgba(255,255,255,0.7); text-decoration: none;">News</a></li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="font-weight: 700; margin-bottom: 20px; font-size: 16px;">Shop</h4>
+            <ul style="list-style: none; padding: 0; margin: 0;">
+              <li style="margin-bottom: 12px;"><a href="cart.html" style="color: rgba(255,255,255,0.7); text-decoration: none;">My Cart</a></li>
+              <!-- Donate link removed -->
+              <li style="margin-bottom: 12px;"><a href="index.html#about" style="color: rgba(255,255,255,0.7); text-decoration: none;">About Us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="divider" style="background: rgba(255,255,255,0.1); margin-bottom: 32px;"></div>
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+          <p style="opacity: 0.6; font-size: 14px;">© 2025 FIRST AID INTERNATIONAL, INC. All rights reserved.</p>
+          <div style="display: flex; gap: 24px; font-size: 14px;">
+            <a href="legal.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Legal Notice</a>
+            <a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a>
+            <a href="cookies.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Cookies</a>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script src="js/config.js"></script>
+  <script src="js/currency.js"></script>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+  <script src="js/modals.js"></script>
+  <script>
+
+
+        // Dynamically updates the number of products in the cart
+        function updateCartBadge() {
+          const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+          const badge = document.getElementById('cart-badge');
+          const count = cart.reduce((sum, item) => sum + (item.quantity || 1), 0);
+          badge.textContent = count;
+        }
+
+        // Adds a product to the cart
+        function addToCart(productId) {
+          const cart = JSON.parse(localStorage.getItem('cart') || '[]');
+          const existing = cart.find(item => item.id === productId);
+          if (existing) {
+            existing.quantity = (existing.quantity || 1) + 1;
+          } else {
+            cart.push({ id: productId, quantity: 1 });
+          }
+          localStorage.setItem('cart', JSON.stringify(cart));
+          updateCartBadge();
+          showToast('Product added to cart', '🛒');
+        }
+
+        // Displays products in the grid
+        function renderShopGrid() {
+          const products = [
+            { id: 1, name: 'T-Shirt', emoji: '👕', price: 20, desc: 'Solidarity T-shirt, 100% organic cotton.' },
+            { id: 2, name: 'Notebook', emoji: '📓', price: 8, desc: 'Solidarity notebook, recycled paper.' },
+            { id: 3, name: 'Mug', emoji: '☕', price: 12, desc: 'Solidarity mug, ceramic.' }
+          ];
+          const grid = document.getElementById('shop-grid');
+          grid.innerHTML = products.map(prod => `
+            <div class="card" style="padding:32px; text-align:center; display:flex; flex-direction:column; align-items:center;">
+              <div style="font-size:64px; margin-bottom:16px;">${prod.emoji}</div>
+              <div style="font-weight:700; color:var(--color-primary); font-size:24px; margin-bottom:8px;">${prod.name}</div>
+              <div style="color:var(--color-text-light); margin-bottom:8px; font-size:16px;">${prod.desc}</div>
+              <div style="font-size:18px; color:var(--color-primary); font-weight:600; margin-bottom:16px;">${prod.price} €</div>
+              <button onclick="addToCart(${prod.id})" class="btn btn-accent" style="width:100%; font-size:16px;">Add to cart</button>
+            </div>
+          `).join('');
+        }
+
+        // Initialize shop page
+        function initShop() {
+          renderShopGrid();
+          updateCartBadge();
+          // ...existing code... (no language selector, no auto-translate)
+        }
+
+        if (document.readyState === 'loading') {
+          document.addEventListener('DOMContentLoaded', initShop);
+        } else {
+          initShop();
+        }
+
+    // ...existing code... (no auto-translate)
+  </script>
+ </body>
+</html>

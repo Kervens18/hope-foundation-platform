@@ -1,0 +1,23 @@
+[
+  {
+    "title": "Lancement de notre nouveau programme éducatif",
+    "date": "2026-02-15",
+    "author": "Equipe Hope Foundation",
+    "image": "images/blog-education.jpg",
+    "summary": "Nous sommes fiers d'annoncer le lancement d'un programme educatif pour les enfants defavorises. Decouvrez comment vous pouvez contribuer a cette initiative."
+  },
+  {
+    "title": "Retour sur la collecte de fonds 2025",
+    "date": "2026-01-10",
+    "author": "Marie Dupont",
+    "image": "images/blog-fundraising.jpg",
+    "summary": "Grace a votre generosite, la collecte de fonds annuelle a permis de financer de nouveaux projets. Merci a tous nos donateurs !"
+  },
+  {
+    "title": "Partenariat avec Sante Pour Tous",
+    "date": "2025-12-05",
+    "author": "Hope Foundation",
+    "image": "images/blog-partnership.jpg",
+    "summary": "Nous avons signe un partenariat avec l'association Sante Pour Tous afin d'ameliorer l'acces aux soins dans les zones rurales."
+  }
+]

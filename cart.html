@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="fr" class="h-full">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mon Panier - FIRST AID INTERNATIONAL, INC.</title>
+  <link rel="stylesheet" href="styles/main.css">
+</head>
+<body class="h-full overflow-auto" style="background-color: var(--color-background);">
+  <header class="sticky-header">
+    <div class="container">
+      <div style="display: flex; align-items: center; justify-content: space-between; padding: 20px 0;">
+        <a href="index.html" style="font-size: 32px; color: var(--color-primary); text-decoration: none; font-weight: bold;">FIRST AID INTERNATIONAL, INC.</a>
+        <a href="shop.html" class="btn btn-outline">← Back to shop</a>
+      </div>
+    </div>
+  </header>
+  <main class="container" style="max-width: 800px; margin: 40px auto;">
+    <h1 class="font-display text-3xl font-bold" style="color: var(--color-primary); margin-bottom: 32px;">🛒 My Cart</h1>
+    <div id="cart-items"></div>
+    <div id="cart-summary" style="margin-top: 32px;"></div>
+    <div style="margin-top: 32px; display: flex; gap: 16px;">
+      <a href="shop.html" class="btn btn-secondary">← Continue shopping</a>
+      <a href="pay.html" class="btn btn-primary" id="pay-order-btn">Pay Order</a>
+    </div>
+  </main>
+  <script src="js/utils.js"></script>
+  <script src="js/components.js"></script>
+  <script>
+    // Synchronise les produits du panier avec ceux de la boutique
+    function renderCart() {
+      // Synchronise le panier avec localStorage 'cart' et structure shop.html
+      const products = [
+        { id: 1, name: 'T-Shirt', emoji: '👕', price: 20, desc: 'Solidarity t-shirt, 100% organic cotton.' },
+        { id: 2, name: 'Notebook', emoji: '📓', price: 8, desc: 'Solidarity notebook, recycled paper.' },
+        { id: 3, name: 'Mug', emoji: '☕', price: 12, desc: 'Solidarity mug, ceramic.' }
+      ];
+      const cart = JSON.parse(localStorage.getItem('cart') || '[]').map(item => {
+        const prod = products.find(p => p.id === item.id);
+        return prod ? { ...prod, ...item } : item;
+      });
+      const cartItemsDiv = document.getElementById('cart-items');
+      const cartSummaryDiv = document.getElementById('cart-summary');
+      if (cart.length === 0) {
+        cartItemsDiv.innerHTML = '<p style="text-align:center; color:var(--color-text-light); font-size:18px;">Your cart is empty.</p>';
+        cartSummaryDiv.innerHTML = '';
+        document.querySelector('h1').innerHTML = `🛒 My Cart (0 item)`;
+        if (typeof updateCartBadge === 'function') updateCartBadge();
+        return;
+      }
+      let total = 0;
+      let totalArticles = 0;
+      cartItemsDiv.innerHTML = cart.map((item, i) => {
+        const qty = item.quantity || 1;
+        totalArticles += qty;
+        const itemTotal = (parseFloat(item.price) * qty);
+        total += itemTotal;
+        return `
+        <div style="display:flex; align-items:center; justify-content:space-between; border-bottom:1px solid #eee; padding:16px 0;">
+          <div style="display:flex; align-items:center; gap:16px;">
+            <div style="font-size:40px;">${item.emoji || ''}</div>
+            <div>
+              <div style="font-weight:600; font-size:18px;">${item.name || item.title}</div>
+              <div style="color:var(--color-text-light); font-size:14px;">${item.desc || item.description || ''}</div>
+              <div style="font-size:16px; color:var(--color-primary); margin-top:4px;">${item.price}€ each</div>
+            </div>
+          </div>
+          <div style="display:flex; flex-direction:column; align-items:end; gap:8px;">
+            <div style="display:flex; align-items:center; gap:8px;">
+              <button onclick="changeQty(${item.id}, -1)" class="btn btn-outline" style="font-size:18px; width:32px; height:32px;">-</button>
+              <span style="font-size:18px; min-width:24px; text-align:center;">${qty}</span>
+              <button onclick="changeQty(${item.id}, 1)" class="btn btn-outline" style="font-size:18px; width:32px; height:32px;">+</button>
+            </div>
+            <div style="font-size:16px; color:var(--color-primary); font-weight:600;">${itemTotal.toFixed(2)}€</div>
+            <button onclick="removeItem(${item.id})" class="btn btn-outline" style="font-size:14px;">Remove</button>
+          </div>
+        </div>
+        `;
+      }).join('');
+      cartSummaryDiv.innerHTML = `<div style="text-align:right; font-size:20px; font-weight:700; color:var(--color-primary);">Total: ${total.toFixed(2)}€</div>`;
+      document.querySelector('h1').innerHTML = `🛒 My Cart (${totalArticles} item${totalArticles>1?'s':''})`;
+      if (typeof updateCartBadge === 'function') updateCartBadge();
+    }
+    function changeQty(productId, delta) {
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      const item = cart.find(it => it.id === productId);
+      if (!item) return;
+      let newQty = (item.quantity || 1) + delta;
+      if (newQty < 1) newQty = 1;
+      item.quantity = newQty;
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+    function removeItem(productId) {
+      let cart = JSON.parse(localStorage.getItem('cart') || '[]');
+      cart = cart.filter(it => it.id !== productId);
+      localStorage.setItem('cart', JSON.stringify(cart));
+      renderCart();
+    }
+    document.addEventListener('DOMContentLoaded', renderCart);
+    window.viewShoppingCart = renderCart;
+  </script>
+  </script>
+  <!-- Footer -->
+  <footer style="background: #0F172A; color: white; padding: 80px 0 32px; margin-top: 48px;">
+    <div class="container">
+      <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px;">
+        <p style="opacity: 0.6; font-size: 14px;">© 2025 FIRST AID INTERNATIONAL, INC. All rights reserved.</p>
+        <div style="display: flex; gap: 24px; font-size: 14px;">
+          <a href="legal.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Legal Notice</a>
+          <a href="privacy.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Privacy Policy</a>
+          <a href="cookies.html" style="color: rgba(255,255,255,0.6); text-decoration: none;">Cookies</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
